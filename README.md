@@ -1,35 +1,36 @@
+<p align="center">
+  <img width="800" src="images/pipeline.png" alt="Pipeline diagram"></a>
+</p>
+
 ## Big Data Pipeline
 
 The pipeline is made out of multiple pipe segments which can, but don't have to, connect to each other.  
 
-### 1) Data Source to Kafka
+### Research and analysis
 
-* AKA Kafka Producer
-* written in Python
-* transports data from a CSV file to a Kafka topic
+Before solving a problem with a tool make sure you picked the right tool.  
+Data has to be gathered, enriched, analysed and stored.  
+Apache Kafka, Apache Spark, Apache Hive and Redis seem like the right tools for this job.  
 
-For more information, take a look at the project's [README](https://github.com/MislavJaksic/Big-Data-Pipeline/tree/master/Data-Source-To-Kafka).  
+You can see how I've come to that conclusion by visiting the [GitHub folder](https://github.com/MislavJaksic/KnowledgeRepository/tree/master/BigData).  
 
-### 2) Hive-Redis To Spark To Hive 
+### [Data Source to Kafka](https://github.com/MislavJaksic/Big-Data-Pipeline/tree/master/Data-Source-To-Kafka)
 
-* written in Java using Maven
+* a.k.a. Kafka Producer
+* Transports data from a CSV file to Kafka
+* Written in Python
 
-1) Take data from both Apache Hive and Redis  
-2) Combine it into a single data object using a user written function  
-3) Send data objects into Apache Spark for analysis  
-4) Store the results back into Apache Hive  
+### [Kafka To Hive](https://github.com/MislavJaksic/Big-Data-Pipeline/tree/master/Kafka-To-Hive/src/main/java/mjaksic/Kafka_To_Hive)
 
-For more information, take a look at the project's [Javadocs](https://github.com/MislavJaksic/Big-Data-Pipeline/tree/master/Hive-Redis-To-Spark-To-Hive/doc) and [source code](https://github.com/MislavJaksic/Big-Data-Pipeline/tree/master/Hive-Redis-To-Spark-To-Hive/src/main/java/mjaksic/Hive_Redis_To_Spark_To_Hive).  
+* a.k.a. Kafka Consumer
+* Transports data from Kafka to Apache Hive
+* Written in Java using Maven
 
-### 3) Kafka To Hive
+### [Hive-Redis To Spark To Hive](https://github.com/MislavJaksic/Big-Data-Pipeline/tree/master/Hive-Redis-To-Spark-To-Hive/src/main/java/mjaksic/Hive_Redis_To_Spark_To_Hive) 
 
-* AKA Kafka Producer
-* written in Java using Maven
-* transports data from a Kafka topic to a row in Apache Hive table
+1) Takes data from both Apache Hive and Redis
+2) Combines data into a single object
+3) Sends objects into Apache Spark for analysis
+4) Stores results back into Apache Hive
 
-For more information, take a look at the project's [Javadocs](https://github.com/MislavJaksic/Big-Data-Pipeline/tree/master/Kafka-To-Hive/doc) and [source code](https://github.com/MislavJaksic/Big-Data-Pipeline/tree/master/Kafka-To-Hive/src/main/java/mjaksic/Kafka_To_Hive).  
-
-### Tutorial Analysis and Theoretical Foundation
-
-Apache Kafka, Apache Spark, Apache Hive and Redis had to be studied first to make sure they are the right tools for the job.  
-The results of this study can be read by following the [GitHub link](https://github.com/MislavJaksic/KnowledgeRepository/tree/master/BigData).  
+* Written in Java using Maven
