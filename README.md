@@ -4,15 +4,15 @@
 
 ## Big Data Pipeline
 
-The pipeline is made out of multiple pipe segments which can, but don't have to, connect to each other.  
+The pipeline is made from multiple pipe segments which can, but don't have to, connect to each other.  
 
 ### Research and analysis
 
-Before solving a problem with a tool make sure you picked the right tool.  
+Before solving a problem make sure you choose the right tool.  
 Data has to be gathered, enriched, analysed and stored.  
 Apache Kafka, Apache Spark, Apache Hive and Redis seem like the right tools for this job.  
 
-You can see how I've come to that conclusion by visiting the [GitHub folder](https://github.com/MislavJaksic/KnowledgeRepository/tree/master/BigData).  
+You can see how I've come to this conclusion by visiting the [GitHub folder](https://github.com/MislavJaksic/KnowledgeRepository/tree/master/BigData).  
 
 ### [Data Source to Kafka](https://github.com/MislavJaksic/Big-Data-Pipeline/tree/master/Data-Source-To-Kafka)
 
@@ -24,7 +24,7 @@ You can see how I've come to that conclusion by visiting the [GitHub folder](htt
 
 * a.k.a. Kafka Consumer
 * Transports data from Kafka to Apache Hive
-* Written in Java using Maven
+* Written in Java, package using Maven
 
 ### [Hive-Redis To Spark To Hive](https://github.com/MislavJaksic/Big-Data-Pipeline/tree/master/Hive-Redis-To-Spark-To-Hive/src/main/java/mjaksic/Hive_Redis_To_Spark_To_Hive) 
 
@@ -33,4 +33,4 @@ You can see how I've come to that conclusion by visiting the [GitHub folder](htt
 3) Sends objects into Apache Spark for analysis
 4) Stores results back into Apache Hive
 
-* Written in Java using Maven
+* Written in Java, package using Maven
