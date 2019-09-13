@@ -4,33 +4,33 @@
 
 ## Big Data Pipeline
 
-The pipeline is made from multiple pipe segments which can, but don't have to, connect to each other.  
+Made from programs which can, but don't have to, connect to each other.  
 
 ### Research and analysis
 
-Before solving a problem make sure you choose the right tools.  
+Before hammering a nail, get the right sized hammer.  
 Data has to be gathered, enriched, analysed and stored.  
-Apache Kafka, Apache Spark, Apache Hive and Redis seem like the right tools for this job.  
+Apache Kafka, Apache Spark, Apache Hive and Redis seem like the right tools the job.  
 
-You can see how I've come to this conclusion by visiting [GitHub folder](https://github.com/MislavJaksic/KnowledgeRepository/tree/master/BigData).  
+[Here]((https://github.com/MislavJaksic/KnowledgeRepository/tree/master/BigData)) is how I came to that conclusion.  
 
 ### [Data Source to Kafka](https://github.com/MislavJaksic/Big-Data-Pipeline/tree/master/Data-Source-To-Kafka)
 
 * a.k.a. Kafka Producer
-* Transports data from a CSV file to Kafka
-* Written in Python
+* transports data from a CSV file to Kafka
+* Python
 
 ### [Kafka To Hive](https://github.com/MislavJaksic/Big-Data-Pipeline/tree/master/Kafka-To-Hive/src/main/java/mjaksic/Kafka_To_Hive)
 
 * a.k.a. Kafka Consumer
-* Transports data from Kafka to Apache Hive
-* Written in Java, packaged using Maven
+* transports data from Kafka to Apache Hive
+* Java and Maven
 
-### [Hive-Redis To Spark To Hive](https://github.com/MislavJaksic/Big-Data-Pipeline/tree/master/Hive-Redis-To-Spark-To-Hive/src/main/java/mjaksic/Hive_Redis_To_Spark_To_Hive) 
+### [Hive-Redis To Spark To Hive](https://github.com/MislavJaksic/Big-Data-Pipeline/tree/master/Hive-Redis-To-Spark-To-Hive/src/main/java/mjaksic/Hive_Redis_To_Spark_To_Hive)
 
-1) Takes data from both Apache Hive and Redis
-2) Combines data into a single object
-3) Sends objects into Apache Spark for analysis
-4) Stores results back into Apache Hive
+1) takes data from Apache Hive and Redis
+2) combines data into a single object
+3) sends objects into Apache Spark for analysis
+4) stores results back into Apache Hive
 
-* Written in Java, packaged using Maven
+* Java and Maven
